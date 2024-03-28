@@ -22,3 +22,9 @@ footer {
     height: inherit;
     min-height: inherit;
 }
+.product-img{
+    width: 100%;    
+    height: 250px;
+    object-fit: cover;
+    object-position: center center;
+}

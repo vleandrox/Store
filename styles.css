@@ -1,0 +1,16 @@
+header {
+    border: 1px solid red;
+    height: 152px;
+  }
+  section {
+    border: 1px solid purple;
+    height: 340px;
+  }
+  main {
+    border: 1px solid blue;
+    height: auto;
+  }
+  footer {
+    border: 1px solid #009145; /* Hexadecimal color code*/
+    min-height: 368px;
+  }

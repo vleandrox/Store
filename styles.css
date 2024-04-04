@@ -74,10 +74,7 @@ main {
     height: auto; /* Auto se ajusta automaticamente al contenido*/
     padding-top: 1em;
 }
-footer {
-    /*border: 1px solid #009145; Hexadecimal color code*/
-    min-height: 368px; /* Establece una altura minima pero se expande si el contenido requiere*/    
-}
+
 
 .container{
     width: 100%; /*Se cammbio del 1220px*/ 
@@ -170,8 +167,49 @@ section#hero .container {
     line-height: 80px;
 }
 
-
-
+/*Estilos Footer*/
+footer {
+    /*border: 1px solid #009145; Hexadecimal color code*/
+    min-height: 250px; /* Establece una altura minima pero se expande si el contenido requiere*/    
+    background-color: #7525a7;
+}
+footer .container {
+    display: flex;
+    flex-direction: column;
+}
+.columns-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.columns-container .col ul {
+    list-style-type: none;
+    padding: 0;
+}
+.columns-container .col ul li {
+    padding: 3px 0;
+}
+.columns-container .col ul li.col-main-item {
+    font-weight: bold;
+    padding-bottom: 15px;   
+}
+.columns-container .col ul li a {
+    color: white;
+    text-decoration: none;
+}
+.copyright {
+    border-top: 1px solid #ba53fb;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+.container .col{
+    padding: 1em 3em 1em 3em;
+}
+  
 /* @media screen and (max-width: 768px){
     .product-container{
         width: 100%;
@@ -224,6 +262,10 @@ section#hero .container {
     .search .form input{
         width: 90px;
     }
+    .container .columns-container{
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 /* Estilos para pantallas medianas, como tabletas */
@@ -233,6 +275,10 @@ section#hero .container {
     }
     .search .form input{
         width: 300px;
+    }
+    .container .columns-container{
+        justify-content: center;
+        text-align: center;
     }
 }
 

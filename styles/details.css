@@ -1,0 +1,251 @@
+/*Fuentes al HTML*/
+body,
+html{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+/*Aplicando Estilos a Header*/
+header{
+    border: 1px solid red;
+    height: 152px; /* Height define una altura fija*/
+    background-color: #ff3b3c;
+    padding-top: 1em;
+}
+
+/*Estilos para header*/
+.search {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+}  
+.search .form{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+.search .form input{
+    height: 62px;
+    border-radius: 14px;
+    border: none;
+    width: 505px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.search .social ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.search .social ul li{
+    padding: 0 10px;
+}
+.nav{
+    padding: 10px 0;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav ul li a{
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+}
+.nav ul li a:hover{
+    text-decoration: underline;
+}
+
+section {
+    /* border: 1px solid purple; */
+    height: 340px;
+}
+main {
+    /* border: 1px solid blue; */
+    height: auto; /* Auto se ajusta automaticamente al contenido*/
+    padding-top: 1em;
+}
+
+/*ESTILOS PARA DETAILS.CSS*/
+.container{
+    width: 100%; /*Se cammbio del 1220px*/ 
+    margin: 0 auto; /*Centrar auto el contenedor elementro padre*/
+    /*border: 1px solid springgreen; Visualizar sus limites*/
+    height: inherit;
+    min-height: inherit;
+}
+.columns-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.product-images-block, .product-description-block, .product-checkout-block {
+    flex: 1;
+    
+    padding: 1em;
+    margin: 1em;
+}
+  
+.product-description-block .title {
+    color: #333; /* Elige un color adecuado */
+    font-size: 24px; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold;
+    margin-top: 0;
+    word-wrap: break-word;
+}
+.product-description-block .selector fieldset{
+    border: 2px #919191 solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.product-description-block .selector fieldset select{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.product-description-block .description p{
+    color: #0c0c0c;
+    font-size: 16px;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+
+
+/*Estilos Footer*/
+footer {
+    /*border: 1px solid #009145; Hexadecimal color code*/
+    min-height: 250px; /* Establece una altura minima pero se expande si el contenido requiere*/    
+    background-color: #7525a7;
+}
+footer .container {
+    display: flex;
+    flex-direction: column;
+}
+.columns-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.columns-container .col ul {
+    list-style-type: none;
+    padding: 0;
+}
+.columns-container .col ul li {
+    padding: 3px 0;
+}
+.columns-container .col ul li.col-main-item {
+    font-weight: bold;
+    padding-bottom: 15px;   
+}
+.columns-container .col ul li a {
+    color: white;
+    text-decoration: none;
+}
+.copyright {
+    border-top: 1px solid #ba53fb;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+.container .col{
+    padding: 1em 3em 1em 3em;
+}
+  
+/* @media screen and (max-width: 768px){
+    .product-container{
+        width: 100%;
+        display: block;
+    }
+} */
+
+/*Para usarlos con el FLEX*/
+/* @media only screen and (max-width: 768px) {
+    .product-container {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-around;
+    }
+    .product-card {
+        width: 45%; 
+        margin-bottom: 20px; 
+    }
+} */
+/* Para que los elementos se envuelvan cuando no haya suficiente espacio */
+/* Para distribuir los elementos de manera uniforme */
+/* Ajustar el ancho de los elementos individuales para que haya espacio entre ellos */
+/* Agregar un margen inferior para separar los elementos */
+
+
+/* Estilos para pantallas más pequeñas, como teléfonos móviles */
+@media only screen and (max-width: 600px) {
+    header {
+        height: 100px; /* Reducir la altura del encabezado */
+    }
+    section,
+    #hero {
+        height: 200px; /* Reducir la altura de las secciones */
+    }
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* Cambiar a una disposición de 2 columnas */
+    }
+    .product-img {
+        height: 150px; /* Reducir el tamaño de la imagen del producto */
+    }
+    .title-container span:first-child {
+        font-size: 30px; /* Reducir el tamaño del primer título */
+    }
+    .title-container span:last-child {
+        font-size: 70px; /* Reducir el tamaño del segundo título */
+    }
+    .search .logo img{
+        width: 150px;
+    }
+    .search .form input{
+        width: 90px;
+    }
+    .container .columns-container{
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Estilos para pantallas medianas, como tabletas */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr); /* Cambiar a una disposición de 3 columnas */
+    }
+    .search .form input{
+        width: 300px;
+    }
+    .container .columns-container{
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Estilos para pantallas grandes, como computadoras de escritorio */
+@media only screen and (min-width: 1025px) {
+    .product-container {
+        grid-template-columns: repeat(4, 1fr); /* Mantener la disposición de 4 columnas */
+    }
+}

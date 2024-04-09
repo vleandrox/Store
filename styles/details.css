@@ -90,11 +90,11 @@ main {
     flex-wrap: wrap;
     gap: 20px;
 }
-.product-images-block, .product-description-block, .product-checkout-block {
+.product-images-block, 
+.product-description-block, 
+.product-checkout-block {
     flex: 1;
-    
-    padding: 1em;
-    margin: 1em;
+    margin: 0px 10px;
 }
   
 .product-description-block .title {
@@ -127,20 +127,30 @@ main {
 }
 /*Estilos a imagenes*/
 .product-images-block {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
     max-width: 100%;
     overflow: hidden; /* Asegúrate de que las imágenes no desborden el contenedor */
 }
 .product-images-block .thumbnail-container{
-    max-width: 100%;
-    overflow: hidden; /* Mantiene la imagen dentro del contenedor */
-    margin: 5px; /* Ajusta el margen según sea necesario */
-    border: 1px solid #ccc; /* Opcional, si deseas bordes */
+    grid-column: 1;
+    margin: 3px;
+    /*max-width: 100%;*/
+    /*overflow: hidden;  Mantiene la imagen dentro del contenedor */
+    /*margin: 5px; Ajusta el margen según sea necesario */
+    /*border: 1px solid #ccc; Opcional, si deseas bordes */
 }
 .product-images-block .thumbnail-container img{
     max-width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: contain; /*Asegura que la imagen se ajuste dentro contenedor*/
     object-position: center center; /* Centra la imagen en el contenedor */   
+}
+.product-images-block .main-image{
+    width: 100%;
+    grid-row: 1/5;
+    grid-column: 2/5;  
+    margin: 0em 0em 0em 1em;  
 }
 
 /*Estilos al checkout*/
